@@ -1,3 +1,10 @@
+qstardict (0.13.1-7) unstable; urgency=low
+
+  * optified
+  * Fixed icons
+
+ -- SR <sbir@list.ru>  Fri, 29 Dec 2009 21:43:00 +0300
+
 qstardict (0.13.1-6) unstable; urgency=low
 
   * Final Version

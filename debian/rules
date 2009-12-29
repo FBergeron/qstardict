@@ -45,13 +45,16 @@ install:
 	cd $(CURDIR)/plugins && $(MAKE) INSTALL_ROOT=$(CURDIR)/debian/qstardict install
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/pixmaps
 	cp $(CURDIR)/debian/qstardict.xpm $(CURDIR)/debian/qstardict/usr/share/pixmaps/qstardict.xpm
+	mkdir -p $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/scalable/hildon
 	cp $(CURDIR)/qstardict/qstardict.png $(CURDIR)/debian/qstardict/usr/share/pixmaps/qstardict.png
+	cp $(CURDIR)/qstardict/qstardict.png $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/scalable/hildon/qstardict.png
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/applications/hildon/
 	cp $(CURDIR)/qstardict/qstardict.desktop $(CURDIR)/debian/qstardict/usr/share/applications/hildon/qstardict.desktop
 
 binary-indep: build install
 
 binary-arch: install
+	dh_maemo_package_icons
 	dh_testdir
 	dh_testroot
 	dh_installmenu
@@ -62,7 +65,11 @@ binary-arch: install
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
+	if test -x /usr/bin/maemo-optify; then \
+		maemo-optify; \
+	fi
 	dh_builddeb
+	dh_maemo_package_icons -r
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure

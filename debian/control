@@ -1,16 +1,17 @@
 Source: qstardict
-Version: 0.13.1-6
+Version: 0.13.1-7
 Section: x11
 Priority: optional
 Maintainer: SR <sbir@list.ru>
-Build-Depends: debhelper (>= 5), libqt4-dev (>= 4.4.0), libglib2.0-dev, zlib1g-dev, libx11-dev
+Build-Depends: debhelper (>= 5), libqt4-dev (>= 4.4.0), libglib2.0-dev, zlib1g-dev, libx11-dev, debhelper-maemo-package-icons (>= 0.0.2), maemo-optify | maemo-version (< 5.0)
 Standards-Version: 3.8.0
-Homepage: http://qstardict.ylsoftware.com
 
 Package: qstardict
+Section: user/office
 Architecture: any
 Depends: ${shlibs:Depends}
 Suggests: festival
+XB-Maemo-Display-Name: QStarDict
 Description: International dictionary written using Qt4
  QStarDict is a modern international dictionary written using Qt4.
  .
