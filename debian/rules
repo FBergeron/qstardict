@@ -1,0 +1,68 @@
+#!/usr/bin/make -f
+
+CFLAGS = -Wall
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	qmake-qt4
+	touch configure-stamp
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+	$(MAKE) CFLAGS="$(CFLAGS)"
+	touch $@
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	if test -f $(CURDIR)/Makefile; then \
+		$(MAKE) distclean; \
+	fi
+	if test -f $(CURDIR)/qstardict/moc_dbusadaptor.o; then \
+	    rm -f $(CURDIR)/qstardict/moc_dbusadaptor.o; \
+	fi
+	if test -f $(CURDIR)/qstardict/dbusadaptor.o; then \
+	    rm -f $(CURDIR)/qstardict/dbusadaptor.o; \
+	fi
+	dh_clean
+
+install:
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	cd $(CURDIR)/qstardict && $(MAKE) INSTALL_ROOT=$(CURDIR)/debian/qstardict install
+	cd $(CURDIR)/plugins && $(MAKE) INSTALL_ROOT=$(CURDIR)/debian/qstardict install
+	mkdir -p $(CURDIR)/debian/qstardict/usr/share/pixmaps
+	cp $(CURDIR)/debian/qstardict.xpm $(CURDIR)/debian/qstardict/usr/share/pixmaps/qstardict.xpm
+	cp $(CURDIR)/qstardict/qstardict.png $(CURDIR)/debian/qstardict/usr/share/pixmaps/qstardict.png
+	mkdir -p $(CURDIR)/debian/qstardict/usr/share/applications/hildon/
+	cp $(CURDIR)/qstardict/qstardict.desktop $(CURDIR)/debian/qstardict/usr/share/applications/hildon/qstardict.desktop
+
+binary-indep: build install
+
+binary-arch: install
+	dh_testdir
+	dh_testroot
+	dh_installmenu
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

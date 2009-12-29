@@ -1,0 +1,27 @@
+Source: qstardict
+Version: 0.13.1-6
+Section: x11
+Priority: optional
+Maintainer: SR <sbir@list.ru>
+Build-Depends: debhelper (>= 5), libqt4-dev (>= 4.4.0), libglib2.0-dev, zlib1g-dev, libx11-dev
+Standards-Version: 3.8.0
+Homepage: http://qstardict.ylsoftware.com
+
+Package: qstardict
+Architecture: any
+Depends: ${shlibs:Depends}
+Suggests: festival
+Description: International dictionary written using Qt4
+ QStarDict is a modern international dictionary written using Qt4.
+ .
+ Main features
+  * Full support of StarDict dictionaries
+  * Fuzzy search
+  * Support for hyper links in translations
+  * Working from the system tray
+  * Scanning mouse selection and showing pop-up windows with translation of
+    selected words
+  * Translations reformatting
+  * Pronouncing of the translated words
+  * Plugins support
+

@@ -1,0 +1,2 @@
+?package(qstardict):needs="X11" section="Applications/Text" \
+  title="QStarDict" command="/usr/bin/qstardict" icon="/usr/share/pixmaps/qstardict.xpm"
