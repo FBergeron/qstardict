@@ -4,8 +4,10 @@ echo "Updating GTK's icon cache"
 gtk-update-icon-cache -f /usr/share/icons/hicolor
 
 oldversion="$2"
-if [ -z "$oldversion" ]; then
-  if ! maemo-select-menu-location qstardict.desktop; then
-    echo "Couldn't launch maemo-select-menu-location"
+if [ "$OSSO_PRODUCT_RELEASE_FULL_NAME" != "Maemo 5" ]; then
+  if [ -z "$oldversion" ]; then
+    if ! maemo-select-menu-location qstardict.desktop; then
+      echo "Couldn't launch maemo-select-menu-location"
+    fi
   fi
 fi
