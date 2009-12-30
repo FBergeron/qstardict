@@ -53,7 +53,7 @@ install:
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/applications/hildon/
 	cp $(CURDIR)/qstardict/qstardict.desktop $(CURDIR)/debian/qstardict/usr/share/applications/hildon/qstardict.desktop
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/doc/qstardict
-	cp $(CURDIR)/qstardict/copyright $(CURDIR)/debian/qstardict/usr/share/doc/qstardict/copyright
+	cp $(CURDIR)/debian/copyright $(CURDIR)/debian/qstardict/usr/share/doc/qstardict/copyright
 
 binary-indep: build install
 
