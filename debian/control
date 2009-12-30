@@ -1,5 +1,5 @@
 Source: qstardict
-Version: 0.13.1-7
+Version: 0.13.1-8
 Section: x11
 Priority: optional
 Maintainer: SR <sbir@list.ru>
@@ -10,19 +10,9 @@ Package: qstardict
 Section: user/office
 Architecture: any
 Depends: ${shlibs:Depends}
-Suggests: festival
+Suggests: espeak
 XB-Maemo-Display-Name: QStarDict
 Description: International dictionary written using Qt4
  QStarDict is a modern international dictionary written using Qt4.
  .
- Main features
-  * Full support of StarDict dictionaries
-  * Fuzzy search
-  * Support for hyper links in translations
-  * Working from the system tray
-  * Scanning mouse selection and showing pop-up windows with translation of
-    selected words
-  * Translations reformatting
-  * Pronouncing of the translated words
-  * Plugins support
-
+ It is a StarDict clone written with using Qt4. It can use StarDict DICT files as a word database for translation. QStarDict supports plugins.

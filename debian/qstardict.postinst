@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Updating GTK's icon cache"
+gtk-update-icon-cache -f /usr/share/icons/hicolor
+
+oldversion="$2"
+if [ -z "$oldversion" ]; then
+  if ! maemo-select-menu-location qstardict.desktop; then
+    echo "Couldn't launch maemo-select-menu-location"
+  fi
+fi

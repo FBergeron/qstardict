@@ -29,7 +29,7 @@ Speaker::Speaker()
 {
     m_speechProcess = new QProcess;
     QSettings settings;
-    m_speechCmd = settings.value("Speaker/speechCmd", "festival --tts").toString();
+    m_speechCmd = settings.value("Speaker/speechCmd", "espeak").toString();
 }
 
 Speaker::~Speaker()

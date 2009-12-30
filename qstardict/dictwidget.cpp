@@ -104,7 +104,7 @@ DictWidget::DictWidget(QWidget *parent, Qt::WindowFlags f)
     actionSpeak->setFont(font);
     QSize toolBarSize;
     toolBarSize.setWidth(70);
-    toolBarSize.setHeight(60);
+    toolBarSize.setHeight(50);
     m_toolBar->setIconSize(toolBarSize);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
