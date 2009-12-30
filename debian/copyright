@@ -1,7 +1,5 @@
-This package was debianized by Alexander Rodin <rodin.alexander@gmail.com> on
-Thu, 30 Aug 2007 10:15:32 +0400.
-
-It was downloaded from http://qstardict.ylsoftware.com
+This package was debianized by Alexander R <sbir@list.ru> on
+Fri, 25 Dec 2009 17:13:54 +0300.
 
 Upstream Authors:
     Alexander Rodin <rodin.aleander@gmail.com>
@@ -30,5 +28,5 @@ License:
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL'.
 
-The Debian packaging is (C) 2007, Alexander Rodin <rodin.alexander@gmail.com>
+The Debian packaging is (C) 2009, Alexander R <sbir@list.ru>
 and is licensed under the GPL, see above.

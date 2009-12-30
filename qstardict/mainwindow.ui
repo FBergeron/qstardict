@@ -78,7 +78,7 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>16</pointsize>
+          <pointsize>18</pointsize>
          </font>
         </property>
        </widget>
@@ -194,7 +194,7 @@
       <widget class="QListWidget" name="wordsList">
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>20</pointsize>
         </font>
        </property>
       </widget>

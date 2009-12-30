@@ -1,53 +1,6 @@
-qstardict (0.13.1-8) unstable; urgency=low
+qstardict (0.13.2-1) unstable; urgency=low
 
-  * GUI fix
-  * Build rules fix
+  * Initial 0.13.2 release
 
- -- SR <sbir@list.ru>  Fri, 29 Dec 2009 21:43:00 +0300
-
-qstardict (0.13.1-7) unstable; urgency=low
-
-  * optified
-  * Fixed icons
-
- -- SR <sbir@list.ru>  Fri, 29 Dec 2009 21:43:00 +0300
-
-qstardict (0.13.1-6) unstable; urgency=low
-
-  * Final Version
-
- -- SR <sbir@list.ru>  Fri, 29 Dec 2009 16:33:00 +0300
-
-qstardict (0.13.1-5) unstable; urgency=low
-
-  * Fixed GUI
-
- -- SR <sbir@list.ru>  Fri, 28 Dec 2009 23:27:00 +0300
-
-qstardict (0.13.1-4) unstable; urgency=low
-
-  * Fixed GUI
-  * Updated to Qt 4.6
-
- -- SR <sbir@list.ru>  Fri, 26 Dec 2009 21:03:00 +0300
-
-qstardict (0.13.1-3) unstable; urgency=low
-
-  * Fixed GUI
-  * Updated from svn
-  * Code quirks cleaned
-
- -- SR <sbir@list.ru>  Fri, 26 Dec 2009 01:13:54 +0300
-
-qstardict (0.13.1-2) unstable; urgency=low
-
-  * Fixed GUI
-
- -- SR <sbir@list.ru>  Fri, 25 Dec 2009 20:13:54 +0300
-
-qstardict (0.13.1-1) unstable; urgency=low
-
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
-
- -- SR <sbir@list.ru>  Fri, 25 Dec 2009 17:13:54 +0300
+ -- SR <sbir@list.ru>  Thu, 31 Dec 2009 00:13:54 +0300
 

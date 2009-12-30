@@ -48,8 +48,12 @@ install:
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/scalable/hildon
 	cp $(CURDIR)/qstardict/qstardict.png $(CURDIR)/debian/qstardict/usr/share/pixmaps/qstardict.png
 	cp $(CURDIR)/qstardict/qstardict.png $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/scalable/hildon/qstardict.png
+	mkdir -p $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/26x26/hildon
+	cp $(CURDIR)/debian/qstardict.png $(CURDIR)/debian/qstardict/usr/share/icons/hicolor/26x26/hildon/qstardict.png
 	mkdir -p $(CURDIR)/debian/qstardict/usr/share/applications/hildon/
 	cp $(CURDIR)/qstardict/qstardict.desktop $(CURDIR)/debian/qstardict/usr/share/applications/hildon/qstardict.desktop
+	mkdir -p $(CURDIR)/debian/qstardict/usr/share/doc/qstardict
+	cp $(CURDIR)/qstardict/copyright $(CURDIR)/debian/qstardict/usr/share/doc/qstardict/copyright
 
 binary-indep: build install
 
