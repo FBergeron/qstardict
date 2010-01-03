@@ -364,9 +364,9 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tabPopupWindowApperance">
+     <widget class="QWidget" name="tabPopupWindowAppearance">
       <attribute name="title">
-       <string>Apperance</string>
+       <string>Appearance</string>
       </attribute>
       <layout class="QGridLayout">
        <property name="margin">
@@ -378,7 +378,7 @@
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Popup window apperance</string>
+          <string>Popup window appearance</string>
          </property>
          <layout class="QGridLayout">
           <property name="margin">

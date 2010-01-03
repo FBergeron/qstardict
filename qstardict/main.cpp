@@ -61,7 +61,8 @@ int main(int argc, char *argv[])
     }
 #endif // Q_OS_WIN
 
-
+    app.setProperty("FingerScrollable", true);
+    app.setProperty("FingerScrollBars", true);
     return app.exec();
 }
 

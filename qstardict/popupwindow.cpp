@@ -58,13 +58,13 @@ PopupWindow::~PopupWindow()
 void PopupWindow::loadSettings()
 {
     QSettings config;
-    setScan(config.value("PopupWindow/scan", true).toBool());
+    setScan(config.value("PopupWindow/scan", false).toBool());
     setModifierKey(config.value("PopupWindow/modifierKey", 0).toInt());
-    setShowIfNotFound(config.value("PopupWindow/showIfNotFound", false).toBool());
+    setShowIfNotFound(config.value("PopupWindow/showIfNotFound", true).toBool());
     setWindowOpacity(config.value("PopupWindow/opacity", 1.0).toDouble());
     setTimeoutBeforeHide(config.value("PopupWindow/timeoutBeforeHide", 500).toInt());
     setDefaultSize(config.value("PopupWindow/defaultSize", QSize(320, 240)).toSize());
-    setPronounceWord(config.value("PopupWindow/pronounceWord", true).toBool());
+    setPronounceWord(config.value("PopupWindow/pronounceWord", false).toBool());
     setDefaultStyleSheet(config.value("PopupWindow/defaultStyleSheet", defaultStyleSheet()).toString());
 }
 

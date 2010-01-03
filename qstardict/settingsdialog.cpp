@@ -60,20 +60,20 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_pluginsModel->setHorizontalHeaderLabels(
             QStringList() << tr("Enabled") << tr("Name"));
     loadPluginsList();
-    pluginsTableView->setProperty("FingerScrollable", true);
+    //pluginsTableView->setProperty("FingerScrollable", true);
     pluginsTableView->setModel(m_pluginsModel);
     pluginsTableView->verticalHeader()->hide();
     pluginsTableView->setColumnWidth(0, 90);
-    pluginsTableView->setColumnWidth(1, 380);
+    pluginsTableView->setColumnWidth(1, 400);
 
     m_dictsModel = new QStandardItemModel(this);
     m_dictsModel->setHorizontalHeaderLabels(QStringList() << tr("Enabled") << tr("Name") << tr("Plugin"));
     loadDictsList();
-    dictsTableView->setProperty("FingerScrollable", true);
+    //dictsTableView->setProperty("FingerScrollable", true);
     dictsTableView->setModel(m_dictsModel);
     dictsTableView->verticalHeader()->hide();
     dictsTableView->setColumnWidth(0, 90);
-    dictsTableView->setColumnWidth(1, 380);
+    dictsTableView->setColumnWidth(1, 400);
     dictsTableView->setColumnWidth(2, 130);
 
     // Load global settings

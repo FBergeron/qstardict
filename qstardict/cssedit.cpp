@@ -28,7 +28,7 @@ CSSEdit::CSSEdit(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
-    m_preview->setProperty("FingerScrollable", true);
+    //m_preview->setProperty("FingerScrollable", true);
 
     connect(m_elementCombo, SIGNAL(currentIndexChanged(int)), SLOT(setCurrentElement(int)));
     connect(m_fontCombo, SIGNAL(currentFontChanged(const QFont&)), SLOT(propertyChanged()));

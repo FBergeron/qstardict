@@ -57,8 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
     QAction *actionWordsListDock = wordsListDock->toggleViewAction();
     menu_Options->insertAction(menu_Options->actions().first(), actionWordsListDock);
     actionWordsListDock->setFont(font);
-    wordsList->setProperty("FingerScrollable", true);
-    translationView->setProperty("FingerScrollable", true);
+    //wordsList->setProperty("FingerScrollable", true);
+    //translationView->setProperty("FingerScrollable", true);
     createConnections();
 
     loadSettings();
@@ -168,7 +168,7 @@ void MainWindow::queryEdited(const QString &)
 {
     if (m_queryTimer)
         killTimer(m_queryTimer);
-    m_queryTimer = startTimer(200);
+    m_queryTimer = startTimer(600);
 }
 
 void MainWindow::timerEvent(QTimerEvent *event)

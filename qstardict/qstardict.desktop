@@ -11,3 +11,7 @@ Name[ru]=QStarDict
 GenericName[ru]=Словарь
 Name[tr]=QStarDict
 GenericName[tr]=Sözlük
+X-Window-Icon=qstardict
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+Terminal=false

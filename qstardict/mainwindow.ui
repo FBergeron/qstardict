@@ -14,7 +14,7 @@
    <string>QStarDict</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="pixmaps/pixmaps.qrc">
+   <iconset>
     <normaloff>:/icons/qstardict.png</normaloff>:/icons/qstardict.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -54,7 +54,7 @@
          <string>Clear</string>
         </property>
         <property name="icon">
-         <iconset resource="pixmaps/pixmaps.qrc">
+         <iconset>
           <normaloff>:/icons/clear-right.png</normaloff>:/icons/clear-right.png</iconset>
         </property>
         <property name="iconSize">
@@ -109,7 +109,7 @@
          <string>Search</string>
         </property>
         <property name="icon">
-         <iconset resource="pixmaps/pixmaps.qrc">
+         <iconset>
           <normaloff>:/icons/search-filter.png</normaloff>:/icons/search-filter.png</iconset>
         </property>
         <property name="iconSize">
@@ -204,7 +204,7 @@
   </widget>
   <action name="actionQuit">
    <property name="icon">
-    <iconset resource="pixmaps/pixmaps.qrc">
+    <iconset>
      <normaloff>:/icons/application-exit.png</normaloff>:/icons/application-exit.png</iconset>
    </property>
    <property name="text">
@@ -241,7 +241,7 @@
   </action>
   <action name="actionSettings">
    <property name="icon">
-    <iconset resource="pixmaps/pixmaps.qrc">
+    <iconset>
      <normaloff>:/icons/configure.png</normaloff>:/icons/configure.png</iconset>
    </property>
    <property name="text">
@@ -268,7 +268,7 @@
   </action>
   <action name="actionHelp">
    <property name="icon">
-    <iconset resource="pixmaps/pixmaps.qrc">
+    <iconset>
      <normaloff>:/icons/help-contents.png</normaloff>:/icons/help-contents.png</iconset>
    </property>
    <property name="text">
@@ -297,9 +297,7 @@
   <tabstop>wordsList</tabstop>
   <tabstop>searchClearButton</tabstop>
  </tabstops>
- <resources>
-  <include location="pixmaps/pixmaps.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>searchClearButton</sender>
