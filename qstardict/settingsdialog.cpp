@@ -128,6 +128,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 
     connect(m_pluginsModel, SIGNAL(itemChanged(QStandardItem*)),
             SLOT(pluginsItemChanged(QStandardItem*)));
+    connect(m_dictsModel, SIGNAL(itemChanged(QStandardItem*)),
+            SLOT(dictionariesItemChanged(QStandardItem*)));
 }
 
 void SettingsDialog::accept()
@@ -215,6 +217,7 @@ void SettingsDialog::loadDictsList()
         QStandardItem *item = new QStandardItem();
         item->setCheckable(true);
         item->setCheckState(Qt::Checked);
+        item->setText("V");
         m_dictsModel->setItem(i, 0, item);
         m_dictsModel->setItem(i, 1, new QStandardItem(loadedDicts[i].name()));
         m_dictsModel->setItem(i, 2, new QStandardItem(loadedDicts[i].plugin()));
@@ -227,6 +230,7 @@ void SettingsDialog::loadDictsList()
             QStandardItem *item = new QStandardItem();
             item->setCheckable(true);
             item->setCheckState(Qt::Unchecked);
+            item->setText("O");
             m_dictsModel->setItem(i, 0, item);
             m_dictsModel->setItem(i, 1, new QStandardItem(iter->name()));
             m_dictsModel->setItem(i, 2, new QStandardItem(iter->plugin()));
@@ -246,6 +250,7 @@ void SettingsDialog::loadPluginsList()
         QStandardItem *item = new QStandardItem();
         item->setCheckable(true);
         item->setCheckState(loaded.contains(plugins[i]) ? Qt::Checked : Qt::Unchecked);
+        item->setText(loaded.contains(plugins[i]) ? "V" : "O");
         m_pluginsModel->setItem(i, 0, item);
         m_pluginsModel->setItem(i, 1, new QStandardItem(plugins[i]));
     }
@@ -329,9 +334,18 @@ void SettingsDialog::pluginsItemChanged(QStandardItem *item)
         for (int i = 0; i < rowCount; ++i)
             if (m_pluginsModel->item(i, 0)->checkState() == Qt::Checked)
                 loadedPlugins << m_pluginsModel->item(i, 1)->text();
+        item->setText(item->checkState() ? "V" : "O");
         dict->setLoadedPlugins(loadedPlugins);
         dict->reloadDicts();
         loadDictsList();
+    }
+}
+
+void SettingsDialog::dictionariesItemChanged(QStandardItem *item)
+{
+    if (item->isCheckable())
+    {
+        item->setText(item->checkState() ? "V" : "O");
     }
 }
 

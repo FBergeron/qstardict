@@ -59,6 +59,7 @@ class SettingsDialog: public QDialog, private Ui::SettingsDialog
         void on_pluginsShowInfoButton_clicked();
         void on_pluginsConfigureButton_clicked();
         void pluginsItemChanged(QStandardItem *item);
+        void dictionariesItemChanged(QStandardItem *item);
 
     private slots:
         void loadDictsList();

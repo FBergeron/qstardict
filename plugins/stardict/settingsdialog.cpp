@@ -28,7 +28,7 @@ SettingsDialog::SettingsDialog(StarDict *plugin, QWidget *parent)
 {
     setupUi(this);
 
-    reformatListsBox->setChecked(m_plugin->m_reformatLists);
+    //reformatListsBox->setChecked(m_plugin->m_reformatLists);
     expandAbbreviationsBox->setChecked(m_plugin->m_expandAbbreviations);
     dictDirsList->addItems(m_plugin->m_dictDirs);
     dictDirsList->setProperty("FingerScrollable", true);

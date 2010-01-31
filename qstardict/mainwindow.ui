@@ -144,30 +144,21 @@
      <pointsize>16</pointsize>
     </font>
    </property>
-   <widget class="QMenu" name="menu_File">
-    <property name="title">
-     <string>&amp;File</string>
+   <widget class="QMenu" name="menu">
+    <property name="acceptDrops">
+     <bool>true</bool>
     </property>
-    <addaction name="actionQuit"/>
-   </widget>
-   <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>&amp;Help</string>
+     <string>Menu</string>
     </property>
+    <addaction name="actionSettings"/>
+    <addaction name="actionScan"/>
     <addaction name="actionHelp"/>
     <addaction name="actionAbout"/>
     <addaction name="actionAboutQt"/>
+    <addaction name="actionQuit"/>
    </widget>
-   <widget class="QMenu" name="menu_Options">
-    <property name="title">
-     <string>&amp;Settings</string>
-    </property>
-    <addaction name="actionScan"/>
-    <addaction name="actionSettings"/>
-   </widget>
-   <addaction name="menu_File"/>
-   <addaction name="menu_Options"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QDockWidget" name="wordsListDock">
    <property name="features">

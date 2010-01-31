@@ -103,9 +103,12 @@ void SettingsDialog::on_addDictButton_clicked()
 
 void SettingsDialog::on_removeDictButton_clicked()
 {
-    QListWidgetItem *item = dictsList->takeItem(dictsList->currentRow());
-    m_dicts.remove(item->text());
-    delete item;
+    if(dictsList->count()) {
+        QListWidgetItem *item = dictsList->takeItem(dictsList->currentRow());
+    //if(item) {
+        m_dicts.remove(item->text());
+        delete item;
+    }
 }
 
 void SettingsDialog::refresh()
