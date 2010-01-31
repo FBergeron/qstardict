@@ -124,6 +124,7 @@ StarDict::StarDict(QObject *parent)
         m_dictDirs << QCoreApplication::applicationDirPath() + "/dic";
 #endif // Q_OS_UNIX				
         m_dictDirs << QDir::homePath() + "/.stardict/dic";
+        m_dictDirs << QDir::homePath() + "/MyDocs/stardict/dic";
     }
 }
 
