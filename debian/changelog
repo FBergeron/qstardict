@@ -1,5 +1,11 @@
 qstardict (0.13.2-3) unstable; urgency=low
 
+  * Qt 4.6
+
+ -- SR <sbir@list.ru>  Fri, 5 Mar 2010 19:30:00 +0300
+
+qstardict (0.13.2-3) unstable; urgency=low
+
   * Some bugs fixed
 
  -- SR <sbir@list.ru>  Sun, 31 Jan 2010 19:50:00 +0300

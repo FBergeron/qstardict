@@ -52,10 +52,10 @@ MainWindow::MainWindow(QWidget *parent)
     QFont font;
     font.setPointSize(16);
 
-    menu->insertActions(actionQuit, translationView->toolBar()->actions());
+    menu_File->insertActions(actionQuit, translationView->toolBar()->actions());
 
     QAction *actionWordsListDock = wordsListDock->toggleViewAction();
-    menu->insertAction(menu->actions().first(), actionWordsListDock);
+    menu_Options->insertAction(menu_Options->actions().first(), actionWordsListDock);
     actionWordsListDock->setFont(font);
     //wordsList->setProperty("FingerScrollable", true);
     //translationView->setProperty("FingerScrollable", true);
