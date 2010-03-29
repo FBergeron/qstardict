@@ -26,7 +26,7 @@ TRANSLATIONS += \
 #    qstardict-it_IT.ts \
 #    qstardict-pl_PL.ts \
 #    qstardict-pt_BR.ts \
-#    qstardict-ru_RU.ts \
+    qstardict-ru_RU.ts \
 #    qstardict-ua_UA.ts \
 #    qstardict-tr_TR.ts \
 #    qstardict-zh_CN.ts \
@@ -41,7 +41,7 @@ COMPILED_TRANSLATIONS += \
 #    qstardict-it_IT.qm \
 #    qstardict-pl_PL.qm \
 #    qstardict-pt_BR.qm \
-#    qstardict-ru_RU.qm \
+    qstardict-ru_RU.qm \
 #    qstardict-ua_UA.qm \
 #    qstardict-tr_TR.qm \
 #    qstardict-zh_CN.qm \

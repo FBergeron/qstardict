@@ -107,6 +107,8 @@ void MainWindow::loadSettings()
     wordsListDock->setGeometry(config.value("MainWindow/wordsListDock/geometry", wordsListDock->geometry()).toRect());
     setInstantSearch(config.value("MainWindow/instantSearch", true).toBool());
     setDefaultStyleSheet(config.value("MainWindow/defaultStyleSheet", defaultStyleSheet()).toString());
+    actionToolBar->setChecked(config.value("MainWindow/toolBar",true).toBool());
+    translationView->toggleToolBar(actionToolBar->isChecked());
 }
 
 void MainWindow::saveSettings()
@@ -119,17 +121,16 @@ void MainWindow::saveSettings()
     config.setValue("MainWindow/wordsListDock/geometry", wordsListDock->geometry());
     config.setValue("MainWindow/instantSearch", m_instantSearch);
     config.setValue("MainWindow/defaultStyleSheet", defaultStyleSheet());
+    config.setValue("MainWindow/toolBar", actionToolBar->isChecked());
 }
 
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::about(this,
             tr("About QStarDict"),
-            tr("<b>QStarDict %1 </b> - Qt version of StarDict<br>").arg(QSTARDICT_VERSION) +
-            tr("Copyright (C) 2007-2009 Alexander Rodin "
-               "<a href=\"http://qstardict.ylsoftware.com\">http://qstardict.ylsoftware.com</a><br>"
-               "Package by SR<br>"
-               "<a href=\"http://sr.uz\">http://sr.uz</a>"));
+            tr("<b>QStarDict %1 </b> - Qt version of StarDict ").arg(QSTARDICT_VERSION) +
+            tr("Copyright (C) 2007-2009 Alexander Rodin<br>"
+               "Package by SR"));
 }
 
 void MainWindow::on_actionSettings_triggered()
@@ -252,6 +253,12 @@ void MainWindow::closeEvent(QCloseEvent *event)
     #endif // MAEMO
 
     QMainWindow::closeEvent(event);
+}
+
+void MainWindow::on_actionToolBar_toggled(bool CheckedState)
+{
+    translationView->toggleToolBar(CheckedState);
+    //CheckedState ? translationView->m_toolBar->hide() : translationView->m_toolBar->show();
 }
 
 }

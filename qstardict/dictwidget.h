@@ -92,6 +92,8 @@ class DictWidget: public QFrame
         void reload()
         { m_translationView->reload(); }
 
+        void toggleToolBar(bool CheckedState);
+
     signals:
         /**
          * Emits when translated word is shown.

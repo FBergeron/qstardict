@@ -128,6 +128,21 @@
          <attribute name="verticalHeaderMinimumSectionSize">
           <number>24</number>
          </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>32</number>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>60</number>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>24</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>112</number>
+         </attribute>
         </widget>
        </item>
        <item>
@@ -281,6 +296,21 @@
          </attribute>
          <attribute name="verticalHeaderMinimumSectionSize">
           <number>24</number>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>32</number>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>60</number>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>24</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>112</number>
          </attribute>
         </widget>
        </item>

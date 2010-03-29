@@ -115,6 +115,12 @@ DictWidget::DictWidget(QWidget *parent, Qt::WindowFlags f)
     setLayout(layout);
 }
 
+void DictWidget::toggleToolBar(bool CheckedState)
+{
+    CheckedState ? this->m_toolBar->show() : this->m_toolBar->hide();
+    //m_toolBar->setVisible(CheckedState);
+}
+
 void DictWidget::translate(const QString &str)
 {
     m_translationView->setSource(QUrl("qstardict:" + str));
@@ -133,7 +139,7 @@ void DictWidget::saveToFile()
     QFileDialog dialog(this, tr("Save translation"),
                        dir.path(), filter); //updated by Frank
 	dialog.selectFile(translatedWord());//added by Frank
-    dialog.setNameFilters(QStringList() << tr("HTML files (*.html *.htm)") << tr("Text files (*.txt)"));//updated by Frank
+    dialog.setNameFilters(QStringList() << tr("HTML files (*.html, *.htm)") << tr("Text files (*.txt)"));//updated by Frank
     dialog.selectNameFilter(filter); //added by Frank
 
 	if (dialog.exec() && dialog.selectedFiles().size())

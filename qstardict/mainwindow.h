@@ -102,6 +102,7 @@ class MainWindow: public QMainWindow, private Ui::MainWindow
         void on_actionSettings_triggered();
         void on_actionHelp_triggered();
         void on_queryButton_clicked();
+        void on_actionToolBar_toggled(bool CheckedState);
 
         void wordsListItemActivated(QListWidgetItem *item);
         void wordTranslated(const QString &word);
