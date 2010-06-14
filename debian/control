@@ -1,9 +1,9 @@
 Source: qstardict
-Version: 0.13.2-4
+Version: 0.13.2-3
 Section: user/office
 Priority: optional
 Maintainer: Alexander R <sbir@list.ru>
-Build-Depends: debhelper (>= 5), libqt4-maemo5-dev (>= 4.6.0), libglib2.0-dev, zlib1g-dev, libx11-dev, debhelper-maemo-package-icons (>= 0.0.2), maemo-optify | maemo-version (< 5.0)
+Build-Depends: debhelper (>= 5), libqt4-dev, libglib2.0-dev, zlib1g-dev, libx11-dev, debhelper-maemo-package-icons (>= 0.0.2), maemo-optify | maemo-version (< 5.0)
 Standards-Version: 3.8.0
 
 Package: qstardict

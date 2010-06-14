@@ -11,7 +11,7 @@ endif
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	/opt/qt4-maemo5/bin/qmake-qt4
+	qmake
 	touch configure-stamp
 
 build: build-stamp
