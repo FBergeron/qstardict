@@ -1,3 +1,9 @@
+qstardict (0.13.2-3fb2) unstable; urgency=low
+
+  * Recompilation for PR1.3.
+
+ -- Frederic Bergeron <fbergeron@users.sourceforge.net>  Sat, 27 Oct 2010 22:30:00 +0900
+
 qstardict (0.13.2-3fb) unstable; urgency=low
 
   * Recompilation for PR1.2.
