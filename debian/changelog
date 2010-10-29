@@ -1,3 +1,9 @@
+qstardict (0.13.2-3fb3) unstable; urgency=low
+
+  * Removed dependency to libqt4-experimental-dev.
+
+ -- Frederic Bergeron <fbergeron@users.sourceforge.net>  Sat, 29 Oct 2010 22:30:00 +0900
+
 qstardict (0.13.2-3fb2) unstable; urgency=low
 
   * Recompilation for PR1.3.
